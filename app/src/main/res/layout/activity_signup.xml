@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_menu"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_arrow_back" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_90dp"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:id="@+id/activity_forgot_password_iv_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_curve"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/add_user"
+                        app:tint="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/activity_forgot_password_tv_forgot_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:text="Create New Account"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_iv_logo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_minus40sdp"
+                    android:background="@drawable/curv_rect"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/headerView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/headerView">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_user" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/activity_signUp_et_first_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="First Name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapCharacters"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_user" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/activity_signUp_et_last_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Last Name"
+                                android:imeOptions="actionNext"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:inputType="textCapCharacters"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_tv_message" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_email" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/activity_signUp_et_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Email "
+                                android:imeOptions="actionNext"
+                                android:inputType="textVisiblePassword"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_tv_message" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_phone" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/activity_signUp_et_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Cell Phone"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_tv_message" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_phone" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSignUpGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Gender"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_tv_message" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/activity_signUp_sp_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+                            android:entries="@array/array_gender"
+                            android:hint=""
+                            android:inputType="text"
+                            android:overlapAnchor="false"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+                            android:visibility="invisible" />
+
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/activity_signUp_tv_DOB"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/_50dp"-->
+<!--                            android:layout_marginTop="@dimen/_10dp"-->
+<!--                            android:background="@drawable/bg_gray"-->
+<!--                            android:drawableEnd="@drawable/ic_calendar1"-->
+<!--                            android:drawablePadding="@dimen/_10dp"-->
+<!--                            android:gravity="start|center_vertical"-->
+<!--                            android:hint="Date of Birth"-->
+<!--                            android:inputType="text"-->
+<!--                            android:paddingStart="@dimen/_20sdp"-->
+<!--                            android:paddingEnd="@dimen/_10dp"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textColorHint="@color/dark_gray"-->
+<!--                            android:textSize="@dimen/_15sp"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintHorizontal_weight="1"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/activity_signUp_et_last_name" />-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_calendar1" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/activity_signUp_tv_DOB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Date of Birth"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_tv_message" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/designation" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPosition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Speciality"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                />
+
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerDesignation"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+                            android:entries="@array/array_designation"
+                            android:paddingStart="@dimen/_5dp"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+                            android:visibility="visible" />
+
+
+                        <LinearLayout
+                            android:id="@+id/spc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/designation" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPosition1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Select Specialist"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                />
+
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerDesignation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+                            android:entries="@array/array_designation1"
+                            android:paddingStart="@dimen/_5dp"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/linSpecialDesignation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:visibility="gone"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/designation" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSecialistPosition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:hint="Secialist Position"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/_15sdp"
+                                android:paddingStart="@dimen/_10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_tv_message" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerSpecialityDesignation"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+
+                            android:entries="@array/array_designation"
+                            android:paddingStart="@dimen/_5dp"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+                            android:visibility="visible" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_lock" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="1"
+                                android:orientation="horizontal">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/activity_signUp_et_password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:hint="Password*"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/_15sdp"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textPassword"
+                                    android:paddingStart="@dimen/_10dp"
+                                    android:textColorHint="@color/dark_gray"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <ImageView
+                                    android:id="@+id/imagepassword"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_baseline_visibility_off_24" />
+                            </LinearLayout>
+
+<!--                                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                                    android:id="@+id/activity_signUp_et_password"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@null"-->
+<!--                                    android:fontFamily="@font/montserrat_regular"-->
+<!--                                    android:hint="Password*"-->
+<!--                                    android:imeOptions="actionNext"-->
+<!--                                    android:inputType="textPassword"-->
+<!--                                    android:padding="@dimen/_15sdp"-->
+<!--                                    android:paddingStart="@dimen/_10dp"-->
+<!--                                    android:textColorHint="@color/dark_gray"-->
+<!--                                    android:textSize="@dimen/_12sdp" />-->
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_lock" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_gray" />
+
+<!--                            <com.google.android.material.textfield.TextInputLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                app:hintEnabled="false"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintTop_toBottomOf="@+id/activity_login_et_email"-->
+<!--                                app:passwordToggleEnabled="true">-->
+
+<!--                                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                                    android:id="@+id/activity_signUp_et_confirm_password"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@null"-->
+<!--                                    android:fontFamily="@font/montserrat_regular"-->
+<!--                                    android:hint="Confirm Password*"-->
+<!--                                    android:imeOptions="actionNext"-->
+<!--                                    android:inputType="textPassword"-->
+<!--                                    android:padding="@dimen/_15sdp"-->
+<!--                                    android:paddingStart="@dimen/_10dp"-->
+<!--                                    android:textColorHint="@color/dark_gray"-->
+<!--                                    android:textSize="@dimen/_12sdp" />-->
+
+<!--                            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="1"
+                                android:orientation="horizontal">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/activity_signUp_et_confirm_password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:hint="Confirm Password*"
+                                    android:layout_weight="1"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textPassword"
+                                    android:paddingStart="@dimen/_10dp"
+                                    android:padding="@dimen/_15sdp"
+                                    android:textColorHint="@color/dark_gray"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <ImageView
+                                    android:id="@+id/imagepassword1"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_baseline_visibility_off_24" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvService"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:text="Services"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/llConfirmPassword" />
+
+                        <LinearLayout
+                            android:id="@+id/linService"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_gray"
+                            android:drawablePadding="@dimen/_10dp"
+                            android:inputType="textEmailAddress"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/dark_gray"
+                            android:textSize="@dimen/_15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvService">
+
+                            <CheckBox
+                                android:id="@+id/cb_doral_connect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:button="@drawable/checkselect"
+                                android:checked="true"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text="Doral Connect"
+                                android:textColor="@color/black" />
+
+                            <CheckBox
+                                android:id="@+id/cb_roadl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:button="@drawable/checkselect"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text="RoadL"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/activity_signUp_tv_terms_of_use"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/activity_signUp_switch_terms_of_use"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="I agree to these terms of use"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/activity_signUp_switch_terms_of_use"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_10dp"
+                                android:layout_marginEnd="@dimen/_15dp"
+                                android:layout_toStartOf="@+id/activity_signUp_iv_terms_of_use_info"
+                                android:checked="true"
+                                android:tint="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:id="@+id/activity_signUp_iv_terms_of_use_info"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/colorAccent" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/activity_signUp_tv_privacy_policy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/activity_signUp_switch_privacy_policy"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Privacy Policy"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/activity_signUp_switch_privacy_policy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_10dp"
+                                android:layout_marginEnd="@dimen/_15dp"
+                                android:layout_toStartOf="@+id/activity_signUp_iv_privacy_policy_info"
+                                android:checked="true"
+                                android:tint="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:id="@+id/activity_signUp_iv_privacy_policy_info"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/colorAccent" />
+                        </RelativeLayout>
+
+
+                        <Button
+                            android:id="@+id/activity_signUp_btn_signUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/bg_round_green"
+                            android:text="Sign Up"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:theme="@style/buttonStyle"
+                            app:layout_constraintTop_toBottomOf="@+id/activity_signUp_tv_privacy_policy" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_5dp">
+
+                            <TextView
+                                android:id="@+id/activity_signUp_tv_already_member"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:text="Already a Doral member?"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_signUp_btn_signUp" />
+
+                            <TextView
+                                android:id="@+id/activity_signUp_tv_signUp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="Login"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/_10sdp"
+                                app:layout_constraintStart_toEndOf="@+id/activity_signUp_tv_already_member"
+                                app:layout_constraintTop_toBottomOf="@+id/activity_signUp_btn_signUp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>
+

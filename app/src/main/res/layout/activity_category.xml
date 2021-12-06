@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_80dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_menu"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/latobold"
+                    android:text="Category List"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:background="@drawable/curv_rect"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/bg_gray"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_dropdown"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Gender"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_gray"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_tv_message" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/rect_curve"
+                    android:entries="@array/request_status"
+                    android:hint=""
+                    android:inputType="text"
+                    android:overlapAnchor="false"
+                    android:popupBackground="@drawable/rect_curve"
+                    android:spinnerMode="dropdown"
+                    android:visibility="invisible"
+                    />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_type"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:overScrollMode="never" />
+
+            <Button
+                android:id="@+id/btn_show_status"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:background="@drawable/bg_round_green"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:theme="@style/buttonStyle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Roadl Request Found"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

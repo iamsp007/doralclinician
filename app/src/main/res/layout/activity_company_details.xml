@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_bottom"
+            android:layout_below="@+id/toolbar"
+            android:fitsSystemWindows="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:id="@+id/linPosition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:text="Position Desired"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/position"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_back"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint=""
+                        android:imeOptions="actionDone"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="NestedWeights" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"
+                        android:text="@string/start_date_position"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_back"
+                        android:drawableEnd="@drawable/calendar"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint=""
+                        android:visibility="gone"
+                        android:imeOptions="actionDone"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="NestedWeights" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Are you currently employed?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <RadioGroup
+                        android:id="@+id/rb_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radio_selector"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Yes"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:button="@drawable/radio_selector"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:checked="true"
+                            android:text="No"
+                            android:textSize="@dimen/_10ssp" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/employee">
+
+
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="If so, may we contact your employer?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <RadioGroup
+                        android:id="@+id/rb_group_employer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_yes_employer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radio_selector"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Yes"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_no_employer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:button="@drawable/radio_selector"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="No"
+                            android:textSize="@dimen/_10ssp" />
+                    </RadioGroup>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linHistory"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@color/colorPrimary"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:text="Employement History"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10dp" />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_employer"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_width="match_parent"
+                            android:visibility="visible"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/add_employer"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:visibility="gone"
+                        android:layout_marginEnd="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/add_a_employer"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linEducation"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Education Details"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_education_detail"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:textStyle="bold"
+                        android:text="@string/skills"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <Spinner
+                        android:id="@+id/edt_skill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_back"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint=""
+                        android:entries="@array/skill"
+                        android:imeOptions="actionDone"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="NestedWeights" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_other_skill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Other Skill *"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_other_skill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:hint=""
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="General"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_language"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    >
+
+
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/add_education"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/add_education"
+                        android:layout_marginBottom="@dimen/_5dp"
+                        android:visibility="gone"
+                        android:textAllCaps="false" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/add_language"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/add_language"
+                        android:layout_marginBottom="@dimen/_5dp"
+                        android:visibility="gone"
+                        android:textAllCaps="false" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/linSubmit"
+                    android:layout_alignParentBottom="true"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_previous"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/previous" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_next"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/submit" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>

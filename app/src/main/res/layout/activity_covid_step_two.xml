@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20sdp">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30dp"
+                        android:layout_marginTop="@dimen/_30dp"
+                        android:layout_marginEnd="@dimen/_30dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="COVID-19 \n Immunization Screening \nand Consent Form"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <Spinner
+                        android:id="@+id/sp_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:background="@drawable/bg_gray"
+                        android:entries="@array/preferred_language"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:popupBackground="@drawable/rect_curve"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+                    <!--    Address-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/sp_language">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10dp"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:singleLine="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="Address *"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--    Building-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_buidling"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_address">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_building"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionDone"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10dp"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:singleLine="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="Apt #"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--    city,state-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_state_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_buidling">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spState"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:paddingStart="@dimen/_6sdp"
+                                android:popupBackground="@drawable/rect_curve"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="State *"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_buidling">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/spCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:textSize="@dimen/_12sdp"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:popupBackground="@drawable/rect_curve"
+                                android:singleLine="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="City *"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--    zipcode-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_state_city">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_zip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10dp"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:singleLine="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="Zip *"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/rl_bottom"
+                    layout="@layout/bottom_layout"></include>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</layout>

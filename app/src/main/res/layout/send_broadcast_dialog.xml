@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="start"
+                            android:text="Referral Request"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_close"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/close" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/_5sdp" />
+
+
+                    <co.lujun.androidtagview.TagContainerLayout
+                        android:id="@+id/ll_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="10dp"
+                        app:container_background_color="#00000000"
+                        app:container_border_radius="0dp"
+                        app:container_enable_drag="false"
+                        app:horizontal_interval="10dp"
+                        app:tag_clickable="true"
+                        app:tag_enable_cross="true"
+                        app:tag_theme="random"
+                        app:vertical_interval="10dp" />
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_blue">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/tv_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/img_mic"
+                                android:background="@null"
+                                android:fontFamily="@font/latoregular"
+                                android:hint="Type here"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_mic"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/tv_ok"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/ic_podcast" />
+
+                            <TextView
+                                android:id="@+id/tv_ok"
+                                style="@style/buttonStyle1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:text="Save"
+                                android:visibility="invisible"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <co.lujun.androidtagview.TagContainerLayout
+                            android:id="@+id/ll_suggetion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0dp"
+                            android:padding="10dp"
+                            app:container_background_color="#00000000"
+                            app:container_border_radius="0dp"
+                            app:container_enable_drag="false"
+                            app:horizontal_interval="10dp"
+                            app:tag_background_color="@color/gray"
+                            app:tag_border_color="@color/gray"
+                            app:tag_clickable="true"
+                            app:tag_enable_cross="false"
+                            app:tag_theme="none"
+                            app:vertical_interval="10dp" >
+
+
+                        </co.lujun.androidtagview.TagContainerLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_type"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:overScrollMode="never" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tvBroadCast"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="Broadcast"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+</layout>

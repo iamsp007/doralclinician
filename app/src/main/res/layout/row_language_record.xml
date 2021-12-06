@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- TODO: Update blank fragment layout -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/bg_gray"
+       android:layout_marginStart="@dimen/_10dp"
+       android:layout_marginEnd="@dimen/_10dp"
+       android:layout_marginTop="@dimen/_10dp"
+       android:padding="@dimen/_10dp"
+       android:orientation="vertical">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/montserrat_regular"
+               android:textSize="@dimen/_15dp"
+               android:textColor="@color/black"
+               android:text="Language: "
+               />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tvName"
+               android:layout_width="wrap_content"
+               android:layout_height="21dp"
+               android:fontFamily="@font/montserrat_regular"
+               android:text="Name"
+               android:textColor="@color/dark_gray"
+               android:textSize="@dimen/_14sp" />
+       </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvLanguage"
+           android:fontFamily="@font/montserrat_regular"
+           android:textSize="@dimen/_14sp"
+           android:textColor="@color/dark_gray"
+           android:text="Read,Write,"
+           />
+    </LinearLayout>
+
+
+   </LinearLayout>
+
+
+</layout>

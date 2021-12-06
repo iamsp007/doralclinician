@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/company_selected"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/company_name"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Company Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtCompanyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_back"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint=""
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Position/Title"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDesignation"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_back"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:inputType="text"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/select"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_designation"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:spinnerMode="dialog"
+                            android:visibility="invisible" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Country"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:inputType="text"
+                            android:padding="@dimen/_5sdp"
+                            android:text="UNITED STATE"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/state"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvState"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_back"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:inputType="text"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/select"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:spinnerMode="dialog"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/city"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_back"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:inputType="text"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/select"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:spinnerMode="dialog"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="End Date"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_end_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_back"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:inputType="text"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Start Date"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_back"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:inputType="text"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Reason for leave"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_leave_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_back"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint=""
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/texthintcolor"
+                    android:textSize="@dimen/_10ssp"
+                    tools:ignore="NestedWeights" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

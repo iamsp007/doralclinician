@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ApplicationActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@string/education_details"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/step_1_of_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/medical_institute"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/medical_institute"
+                            android:textAllCaps="true"
+                            android:visibility="gone"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RelativeLayout
+                            android:id="@+id/relMedicalInstitute"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/back_border">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/medical_institute"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMedicalInstitute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:drawableTint="@color/colorAccent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center"
+                                android:text="@string/medical_institute"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_25dp"
+                                android:layout_height="@dimen/_25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/down_arrow_selected"
+                                app:tint="@color/white" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linMedicalInstitute"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="Name of institute*"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/edtMedicalInstituteName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_back"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:hint=""
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/texthintcolor"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:ignore="NestedWeights" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Address Line 1*"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/edtInstituteAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/address"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:imeOptions="actionNext"
+                                android:padding="@dimen/_5sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_2sdp"
+                                android:text="Street name OR P.O box*"
+                                android:visibility="invisible"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Address Line 2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtInstituteAddressLine2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_2sdp"
+                                android:text="Street name OR P.O box*"
+                                android:visibility="invisible"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Apt#"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtApt"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_34sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/city"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:gravity="center_vertical"
+                                        android:hint=""
+                                        android:inputType="text"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/sp_city"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/state"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvState"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:gravity="center_vertical"
+                                        android:hint=""
+                                        android:inputType="text"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/sp_state"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Zip Code*"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtZipCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_34sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="Year started*"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvStartedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:hint=""
+                                        android:gravity="center_vertical"
+                                        android:inputType="number"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spStartedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="Year Completed*"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCompleteYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:hint=""
+                                        android:gravity="center_vertical"
+                                        android:inputType="number"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spCompletedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewMedicalInstitute"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:visibility="gone"
+                            android:background="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/residency_institute"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Residency Institute"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:visibility="gone"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RelativeLayout
+                            android:id="@+id/relResidencyInstitute"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/back_border">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/medical_institute"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:drawableTint="@color/white"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center"
+                                android:text="@string/residency_institute"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_25dp"
+                                android:layout_height="@dimen/_25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/down_arrow_selected"
+                                app:tint="@color/white" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linResidencyInstitute"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="Name of institute *"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/edtResidencyInstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_back"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:hint=""
+                                    android:singleLine="true"
+                                    android:padding="@dimen/_10sdp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/texthintcolor"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:ignore="NestedWeights" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Address Line 1*"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/edtResidencyInstAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/address"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:imeOptions="actionNext"
+                                android:padding="@dimen/_5sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_2sdp"
+                                android:text="Street name OR P.O box*"
+                                android:textColor="@color/colorAccent"
+                                android:visibility="invisible"
+                                android:textSize="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Address Line 2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtResidencyInstAddressLine2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_2sdp"
+                                android:text="Street name OR P.O box*"
+                                android:visibility="invisible"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Apt#"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtResidencyInstApt"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_34sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/city"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvResidencyCity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:gravity="center_vertical"
+                                        android:hint=""
+                                        android:inputType="text"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spResidencyCity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/state"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvResidencyState"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:gravity="center_vertical"
+                                        android:hint=""
+                                        android:inputType="phone"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spResidencyState"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Zip Code*"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtResidencyIntiZipCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_34sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="Year started*"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvResidStartedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:hint=""
+                                        android:inputType="number"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spResidStartedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="Year Completed*"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvResidCompleteYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:hint=""
+                                        android:gravity="center_vertical"
+                                        android:inputType="phone"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spResideCompleteYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:visibility="invisible"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewResidencyInstitute"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:visibility="gone"
+                            android:background="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relFellowshipInstitute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@drawable/back_border">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:src="@drawable/medical_institute"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:drawableTint="@color/white"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center"
+                            android:text="@string/fellowship_institute"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_25dp"
+                            android:layout_height="@dimen/_25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5dp"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/down_arrow_selected"
+                            app:tint="@color/white" />
+
+                    </RelativeLayout>
+
+                   <!-- <include
+                        android:id="@+id/followship_institute"
+                        layout="@layout/add_folloship_institute_item"
+                        android:visibility="gone" />-->
+
+                    <LinearLayout
+                        android:id="@+id/linFellowshipInstitute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/fellowship"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Fellowshiip Institute"
+                                android:textAllCaps="true"
+                                android:visibility="gone"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="end"
+                                android:layout_toStartOf="@+id/img_close"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Delete"
+                                android:visibility="gone"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_close"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:visibility="gone"
+                                android:src="@drawable/close_selected" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="Name of institute *"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/edtFellowNameInstitute"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_back"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:hint=""
+                                    android:singleLine="true"
+                                    android:padding="@dimen/_10sdp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/texthintcolor"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:ignore="NestedWeights" />
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Address Line 1*"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/edtFellowInstiAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/address"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:imeOptions="actionNext"
+                                android:padding="@dimen/_5sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_2sdp"
+                                android:text="Street name OR P.O box*"
+                                android:visibility="invisible"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Address Line 2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtFellowshipInstAddressLine2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_2sdp"
+                                android:text="Street name OR P.O box*"
+                                android:visibility="invisible"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Apt#"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtFellowshipInstApt"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_34sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/city"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCityF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:gravity="center_vertical"
+                                        android:hint=""
+                                        android:inputType="text"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/select"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spCityF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/state"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvStateF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:gravity="center_vertical"
+                                        android:hint=""
+                                        android:inputType="text"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/select"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spStateF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Zip Code*"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtFellowshipZipCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_34sdp"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="Year started*"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvFellowStartedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:hint=""
+                                        android:gravity="center_vertical"
+                                        android:inputType="phone"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spFellowStartedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="Year Completed*"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvFellowCompletedYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_back"
+                                        android:drawableEnd="@drawable/ic_dropdown"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:hint=""
+                                        android:gravity="center_vertical"
+                                        android:inputType="number"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/texthintcolor"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:ignore="NestedWeights" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spFellowCompleteYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:background="@null"
+                                        android:spinnerMode="dialog" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAddFollowship"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:text="@string/add_followship_institute"
+                        android:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNext"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/submit" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

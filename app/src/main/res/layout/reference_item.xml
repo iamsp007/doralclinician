@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_refrence_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/reference"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/reference_one"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_back"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint=""
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/texthintcolor"
+                    android:textSize="@dimen/_10ssp"
+                    tools:ignore="NestedWeights" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_back"
+                android:drawableEnd="@drawable/address"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint=""
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/texthintcolor"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="NestedWeights" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="@dimen/_5sdp"
+                android:text="Phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_back"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint=""
+                android:inputType="number"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/texthintcolor"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="NestedWeights" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/relationship"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edt_relation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/edittext_back"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="Select"
+                android:textColor="@color/black"
+                android:textColorHint="@color/texthintcolor"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="NestedWeights" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_relation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_gray"
+                android:entries="@array/relation"
+                android:hint=""
+                android:inputType="text"
+                android:overlapAnchor="false"
+                android:popupBackground="@drawable/bg_gray"
+                android:spinnerMode="dropdown"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

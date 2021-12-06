@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="5dip" />
+            <gradient
+                android:startColor="@color/transparent"
+                android:centerColor="@color/transparent"
+                android:centerY="0.75"
+                android:endColor="@color/transparent"
+                android:angle="270"
+                />
+        </shape>
+    </item>
+    <item>-->
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="360"
+    android:drawable="@android:color/black">
+
+    <shape
+        android:innerRadiusRatio="3"
+        android:shape="ring"
+        android:thicknessRatio="8"
+        android:useLevel="false">
+
+        <corners
+            android:bottomLeftRadius="10dp"
+            android:bottomRightRadius="10dp"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp" />
+
+        <stroke
+            android:width="0.5dp"
+            android:color="@android:color/black" />
+
+        <gradient
+            android:centerColor="#0DD2E0"
+            android:centerY="0.50"
+            android:endColor="#2CB9C7"
+            android:startColor="#0D7D94"
+            android:type="sweep"
+            android:useLevel="false" >
+
+        </gradient>
+
+    </shape>
+
+</rotate>
+
+    <!--</item>
+
+</layer-list>-->

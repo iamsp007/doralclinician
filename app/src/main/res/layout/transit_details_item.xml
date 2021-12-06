@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relRoute"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linWalking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_walking_map"/>
+
+                <TextView
+                    android:id="@+id/tvStartAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:text="C-1103, Fatehwadi, Shrinand Nagar, Makarba, Ahmedabad, Gujarat 380051, India" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/grey"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linBusTrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_bus"/>
+
+                <TextView
+                    android:id="@+id/tvDeparture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:text="C-1103, Fatehwadi" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvHeadDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:text="C-1103, Fatehwadi" />
+
+            <TextView
+                android:id="@+id/tvRideTotalRouts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:textColor="@color/colorAccent"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:text="C-1103, Fatehwadi" />
+
+            <TextView
+                android:id="@+id/tvArrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:text="C-1103, Fatehwadi" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/grey"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDepartureDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="10:00 AM"/>
+
+    </RelativeLayout>
+
+</layout>

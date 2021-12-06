@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- TODO: Update blank fragment layout -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/bg_gray"
+       android:layout_marginStart="@dimen/_10dp"
+       android:layout_marginEnd="@dimen/_10dp"
+       android:layout_marginTop="@dimen/_10dp"
+       android:padding="@dimen/_10dp"
+       android:id="@+id/lay"
+       android:orientation="vertical">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/montserrat_regular"
+               android:textSize="@dimen/_15dp"
+               android:textColor="@color/black"
+               android:text="Company: "
+               />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tvCompanyName"
+               android:layout_width="wrap_content"
+               android:layout_height="18dp"
+               android:fontFamily="@font/montserrat_regular"
+               android:text="Name"
+               android:textColor="@color/dark_gray"
+               android:textSize="@dimen/_14sp" />
+
+<!--           <ImageView-->
+<!--               android:id="@+id/edit"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="@dimen/_20sdp"-->
+<!--               android:layout_alignParentRight="true"-->
+<!--               android:layout_centerVertical="true"-->
+<!--               android:alpha=".5"-->
+<!--               android:layout_marginLeft="@dimen/_200dp"-->
+<!--               android:onClick="ShowHidePass"-->
+<!--               android:src="@drawable/edit" />-->
+       </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_15dp"
+            android:textColor="@color/black"
+            android:text="Address: "
+            />
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvAddress"
+           android:fontFamily="@font/montserrat_regular"
+           android:textSize="@dimen/_14sp"
+           android:textColor="@color/dark_gray"
+           android:text="Address"
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_15dp"
+            android:textColor="@color/black"
+            android:text="Phone No: "
+            />
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvPhone"
+           android:fontFamily="@font/montserrat_regular"
+           android:textSize="@dimen/_14sp"
+           android:textColor="@color/dark_gray"
+           android:text="Phone"
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_15dp"
+            android:textColor="@color/black"
+            android:text="Supervisor: "
+            />
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvSupervisor"
+           android:fontFamily="@font/montserrat_regular"
+           android:textSize="@dimen/_14sp"
+           android:textColor="@color/dark_gray"
+           android:text="Relation"
+           />
+    </LinearLayout>
+
+
+   </LinearLayout>
+
+
+</layout>

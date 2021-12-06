@@ -1,0 +1,418 @@
+<resources>
+    <string name="app_name">Doral Provider</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="designation">Designation</string>
+    <string name="gender">Gender*</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password*</string>
+    <string name="services">Services</string>
+    <string name="care_connect">Care Connect</string>
+    <string name="i_agree_to_these_terms_of_use">I agree to these terms of use</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_a_doral_member">Already a Doral member?</string>
+    <string name="login">Login</string>
+    <string name="signup_here"><u>Signup Here</u></string>
+    <string name="license">License:</string>
+    <string name="dummy">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</string>
+    <string name="account">Account:</string>
+    <string name="terms_of_use">TERMS OF USE</string>
+    <string name="verification">Verification</string>
+    <string name="enter_otp_code_sent_to_your_number">Enter OTP code sent to your number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="submit">Submit</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="application_details">Application Details</string>
+    <string name="education_details">Education Details</string>
+    <string name="add_company">Add company</string>
+    <string name="professional_ddetails">Professional Details</string>
+    <string name="professional_contact">Professional Contact</string>
+    <string name="background_details">Background Details</string>
+    <string name="deposit_details">Deposit details</string>
+    <string name="verify_identity">Verify Identity</string>
+    <string name="document_verification">Document Verification</string>
+    <string name="review">Review</string>
+    <string name="clear">Clear</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="we_just_need_your_registered_email_address_n_or_mobile_number_to_send_you_password_reset">We just need your registered email address \n or mobile number to send you password reset</string>
+    <string name="step_1_of_4">Step <font color="#00666f"> %d </font>of 4</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="application_name">Applicant Name *</string>
+    <string name="other_name">Other Name *</string>
+    <string name="ssn">SSN *</string>
+    <string name="emergency_phone">Emergency Phone *</string>
+    <string name="date_available">Date Available</string>
+    <string name="us_citizen">US Citizen*:</string>
+    <string name="if_no_immigration_id_card">If No, Immigration ID/Card:</string>
+    <string name="address_line_1">Address line 1*</string>
+    <string name="address_line_2">Address line 2</string>
+    <string name="city">City*</string>
+    <string name="state">State*</string>
+    <string name="zipcode">Zip Code*</string>
+    <string name="length_of_time_at_the_above_address">Length of time at the above address</string>
+    <string name="address">Address*</string>
+    <string name="relationship">Relationship*</string>
+    <string name="add_a_reference">Add a Reference</string>
+    <string name="have_you_ever_been_bonded">Have you ever been bonded?</string>
+    <string name="have_you_ever_been_refused_a_bond">Have you ever been refused a bond?</string>
+    <string name="have_you_over_been_convicated_of_a_crime">Have you over been convicated of a crime?</string>
+    <string name="reference_one"><u>Reference #%s</u></string>
+    <string name="medical_institute">Medical institute</string>
+    <string name="residency_institute">Residency Institute</string>
+    <string name="add_followship_institute">Add fellowship Institute</string>
+    <string name="fellowship_institute">Fellowship Institute</string>
+    <string name="company_name">Company Name</string>
+
+    <!--<string name="map_key">AIzaSyBFLgzqB4zwd4ObxR9lppZv7vI6RZac1rw</string>-->
+    <string name="map_key">AIzaSyCRAJgZT7W43PSBlhKIu_0uN58Onqb_o7w</string>
+
+    <string name="select">select</string>
+    <string name="minute_ago">minute ago</string>
+    <string name="minutes_ago">minutes ago</string>
+    <string name="hour_ago">hour ago</string>
+    <string name="hours_ago">hours ago</string>
+    <string name="day_ago">day ago</string>
+    <string name="days_ago">days ago</string>
+    <string name="month_ago">month ago</string>
+    <string name="months_ago">months ago</string>
+    <string name="year_ago">year ago</string>
+    <string name="years_ago">years ago</string>
+    <string name="sec_ago">second ago</string>
+    <string name="hours">hour</string>
+    <string name="AM">AM</string>
+    <string name="PM">PM</string>
+    <string name="Now">Now</string>
+    <string name="m_short">m</string>
+    <string name="h_short">h</string>
+    <string name="d_short">d</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="mth_short">mth</string>
+    <string name="mths_short">months ago</string>
+    <string name="yr_short">yr</string>
+    <string name="yrs_short">yrs</string>
+    <string name="ok">ok</string>
+    <string-array name="array_gender">
+        <item>select</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="request_status">
+        <item>active</item>
+        <item>accept</item>
+        <item>arrive</item>
+        <item>complete</item>
+        <item>cancel</item>
+    </string-array>
+    <string-array name="relation">
+        <item>Select</item>
+        <item>Professional</item>
+        <item>Personal</item>
+        <!--        <item>Father</item>-->
+        <!--        <item>Mother</item>-->
+        <!--        <item>Brother</item>-->
+        <!--        <item>Sister</item>-->
+        <!--        <item>Wife</item>-->
+        <!--        <item>Husbond</item>-->
+    </string-array>
+    <string-array name="address_type">
+        <item>More than six months</item>
+        <item>Within six months</item>
+    </string-array>
+    <string-array name="referell_request">
+        <item>Neck - 76536</item>
+        <item>Soft Tissue - 76536</item>
+        <item>OB Sono - Detailed  Anatomic  survey - 76811</item>
+        <item>Holter Monitor Radiology</item>
+        <item>Calcium</item>
+        <item>310 - Carbon dioxide - 34392</item>
+        <item>Chest</item>
+        <item>375 - Creatinine - 7600</item>
+
+    </string-array>
+    <string-array name="array_designation">
+        <item>Designation</item>
+        <item>Pediatrician</item>
+        <item>Surgeon</item>
+        <item>Psychiatrist</item>
+        <item>Cardiologist</item>
+        <item>Dermatologist</item>
+    </string-array>
+
+    <string-array name="array_designation1">
+        <item>select</item>
+        <item>Gynecologist (GYN)</item>
+        <item>Gastrointestinal Specialist (GI)</item>
+
+    </string-array>
+    <string-array name="marital_status">
+        <item>Marital Status *</item>
+        <item>Single</item>
+        <item>Divorced</item>
+        <item>Married</item>
+        <item>Widowed</item>
+        <item>Civil Union</item>
+        <item>Unknown</item>
+        <item>Legally Separated</item>
+        <item>Life Partner</item>
+    </string-array>
+    <string-array name="marital_status_value">
+        <item>Marital Status</item>
+        <item>S</item>
+        <item>D</item>
+        <item>M</item>
+        <item>W</item>
+        <item>V</item>
+        <item>U</item>
+        <item>PARTNER</item>
+        <item>SEPARATED</item>
+    </string-array>
+    <string-array name="sex_sp">
+        <item>Sex Assigned at Birth</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Intersex</item>
+        <item>Chose not to Respond</item>
+        <item>Sexual Orientation not Listed (write-in)</item>
+
+    </string-array>
+    <string-array name="sex_sp_value">
+        <item>Sex</item>
+        <item>M</item>
+        <item>F</item>
+        <item>I</item>
+        <item>NR</item>
+        <item>SNL</item>
+
+    </string-array>
+    <string-array name="race_sp">
+        <item>Race *</item>
+        <item>Native American or Alaskan</item>
+        <item>Asian</item>
+        <item>African American or Black</item>
+        <item>Declined</item>
+        <item>Native Hawaiian or Pacific Islander</item>
+        <item>White</item>
+        <item>Other or Multiracial</item>
+
+    </string-array>
+
+    <string-array name="degree">
+<!--        <item>Degree </item>-->
+<!--        <item>High School </item>-->
+        <item>Associate Degree</item>
+        <item>Bachelor’s Degree</item>
+        <item>Master’s Degree</item>
+<!--        <item>Doctoral Degree</item>-->
+<!--        <item>Other Professional Degree</item>-->
+
+
+    </string-array>
+
+
+    <string-array name="skill">
+        <item>Teamwork </item>
+        <item>Compassion and Empathy </item>
+        <item>Good Communication</item>
+        <item>Time-Management Skills</item>
+        <item>Professionalism</item>
+        <item>Physical Strength and Stamina</item>
+        <item>Ability to Manage Stress</item>
+        <item>Other</item>
+
+
+    </string-array>
+
+    <string-array name="account">
+        <item>Select  </item>
+        <item>Checking  </item>
+        <item>Saving</item>
+
+
+    </string-array>
+
+    <string-array name="race_sp1">
+        <item>select</item>
+        <!--        <item>Less than 1 month</item>-->
+        <!--        <item>Less than 3 months</item>-->
+        <item>Less than 6 months</item>
+        <item>More than 6 months</item>
+        <!--        <item>More than 6 months</item>-->
+        <!--        <item>More than 1 year</item>-->
+        <!--        <item>More than 2 year</item>-->
+        <!--        <item>More than 5 year</item>-->
+        <!--        <item>More than 10 year</item>-->
+
+    </string-array>
+
+    <string-array name="race_sp3">
+
+        <item>Less than 6 months</item>
+
+        <item>More than 6 months</item>
+
+
+    </string-array>
+    <string-array name="race_sp_value">
+        <item>Race</item>
+        <item>AIA</item>
+        <item>ASN</item>
+        <item>BAA</item>
+        <item>BAA</item>
+        <item>NHP</item>
+        <item>WHT</item>
+        <item>OTH</item>
+
+    </string-array>
+    <string-array name="gender_sp">
+        <item>Current Gender Id *</item>
+        <item>Woman/Girl</item>
+        <item>Transgender Woman/Girl</item>
+        <item>Man/Boy</item>
+        <item>Transgender Man/Boy</item>
+        <item>Non-Binary Person</item>
+        <item>Gender Non-Conforming</item>
+        <item>Not Sure/Questioning</item>
+        <item>Chose not to Respond</item>
+        <item>Gender not Listed (write-in)</item>
+
+    </string-array>
+    <string-array name="gender_sp_value">
+        <item>Gender</item>
+        <item>W</item>
+        <item>TW</item>
+        <item>M</item>
+        <item>TM</item>
+        <item>NB</item>
+        <item>GNC</item>
+        <item>Q</item>
+        <item>NR</item>
+        <item>GNL</item>
+
+    </string-array>
+    <string-array name="ethencity">
+        <item>Ethnicity *</item>
+        <item>Declined</item>
+        <item>Hispanic Origin</item>
+        <item>Non-Hispanic Origin</item>
+        <item>Unknown</item>
+
+    </string-array>
+    <string-array name="ethencity_value">
+        <item>Ethnicity</item>
+        <item>DECL</item>
+        <item>HIS</item>
+        <item>NHL</item>
+        <item>UNK</item>
+
+    </string-array>
+    <string-array name="preferred_language">
+        <item>Preferred Language *</item>
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Spanish</item>
+
+
+    </string-array>
+    <string-array name="relationship">
+        <item>Relationship</item>
+        <!--        <item>Professional</item>-->
+        <!--        <item>Personal</item>-->
+        <item>Grand Mother</item>
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Husband</item>
+        <item>Wife</item>
+        <item>Son</item>
+        <item>Daughter</item>
+
+    </string-array>
+    <string-array name="array_year">
+        <item>1995</item>
+        <item>1996</item>
+        <item>1997</item>
+        <item>1998</item>
+        <item>1999</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+
+    </string-array>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="allow_permission_settings">Allow permission for settings</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="less_than_20mb">Please select less than 20 MB video</string>
+
+    <string name="toto_ride_videos">PlusSide Videos</string>
+    <string name="toto_ride_image">PlusSide Image</string>
+    <string name="select_video">Select Video</string>
+    <string name="select_image">Select Image</string>
+    <string name="settings">Settings</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="appointments">Appointments</string>
+    <string name="logout">Signout</string>
+    <string name="support">Support</string>
+    <string name="change_password">Change Password</string>
+    <string name="roadl_request">RoadL Request</string>
+    <string name="profile">Profile</string>
+    <string name="resend"><u>Resend Again</u></string>
+    <string name="terms_condition"><![CDATA[Terms & Condition*]]></string>
+    <string name="position">Position</string>
+
+    <string name="add_a_employer">Add Employer</string>
+
+    <string name="add_education">Add Education</string>
+    <string name="start_date_position">Start Date position</string>
+    <string name="add_language">Add Language</string>
+    <string name="skills"> General Skill</string>
+
+    <string name="prior_address_line_1">Address line 1*</string>
+    <string name="prior_address_line_2">Address line 2</string>
+    <string name="resided_prior_address">How long you have resided at prior current address ? </string>
+    <string name="resided_address">How long you have resided at current address ? </string>
+    <string name="person_relation">How is this person related to you ? </string>
+    <string name="preparation_time">Preparation Time</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string-array name="array_send_taxaddress">
+        <item>Bank Account Address</item>
+        <item>Office Address</item>
+    </string-array>
+    <string-array name="legal_entity">
+        <item>Legal Entity 1</item>
+        <item>Legal Entity 2</item>
+        <item>Legal Entity 3</item>
+
+    </string-array>
+</resources>

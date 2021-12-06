@@ -1,0 +1,92 @@
+{
+  "project_info": {
+    "project_number": "409560615341",
+    "project_id": "doctorapp-b4032",
+    "storage_bucket": "doctorapp-b4032.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409560615341:android:d6cffee30b816427ed3924",
+        "android_client_info": {
+          "package_name": "com.doral.clinician.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409560615341-kpi9ft2c45d8rct8u54uikl4e3rei3jq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doral.clinician.android",
+            "certificate_hash": "02c20f6d90e4f33416ed6a78f0f630566e009856"
+          }
+        },
+        {
+          "client_id": "409560615341-h2a44i3alov7vlt5l4dmoqehtftvfar6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRAJgZT7W43PSBlhKIu_0uN58Onqb_o7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409560615341-h2a44i3alov7vlt5l4dmoqehtftvfar6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409560615341:android:8d9ef2ec260f46f3ed3924",
+        "android_client_info": {
+          "package_name": "com.doral.patient.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409560615341-8q21jv9h8pbpbnre6h5uvmad3mcg27v7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doral.patient.android",
+            "certificate_hash": "9b6cb24ebd6c97eadad42c9834c8675394de7a45"
+          }
+        },
+        {
+          "client_id": "409560615341-ehr95gn0qrqtqpm1h13ejbeebsttp4tp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doral.patient.android",
+            "certificate_hash": "e63062c946826f91c2cd893fd0393d98742be104"
+          }
+        },
+        {
+          "client_id": "409560615341-h2a44i3alov7vlt5l4dmoqehtftvfar6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRAJgZT7W43PSBlhKIu_0uN58Onqb_o7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409560615341-h2a44i3alov7vlt5l4dmoqehtftvfar6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

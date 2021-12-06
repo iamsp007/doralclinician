@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ApplicationActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="professional licenses/certificate"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Medicare Enrolled"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RadioGroup
+                            android:id="@+id/rgMedicare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbMedicareEnrolledYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Yes"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <RadioButton
+                                android:id="@+id/rbMedicareEnrolledNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="No"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnMedicare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="if yes(select state) *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvStateMedicare"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:inputType="text"
+                                android:padding="@dimen/_5sdp"
+                                android:text="select"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spStateMedicare"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@null"
+                                android:spinnerMode="dialog"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Medicare Number *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtMedicareNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Medicaid Enrolled"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RadioGroup
+                            android:id="@+id/rgMedicId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbMedicaidEnrolledYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Yes"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <RadioButton
+                                android:id="@+id/rbMedicaidEnrolledNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="No"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnMedicId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="if yes(select state) *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMedicaidState"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:inputType="text"
+                                android:padding="@dimen/_5sdp"
+                                android:text="select"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spMedicaidState"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@null"
+                                android:spinnerMode="dialog"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Medicaid Number *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtMedicidNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Age Ranges Treated"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="0 - 9"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <CheckBox
+                                android:id="@+id/cb1013"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="10 - 13"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <CheckBox
+                                android:id="@+id/cb1421"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="14 - 21"
+                                android:textSize="@dimen/_10ssp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+
+                            <CheckBox
+                                android:id="@+id/cb2240"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="22 - 40"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <CheckBox
+                                android:id="@+id/cb4165"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="41 - 65"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <CheckBox
+                                android:id="@+id/cb65Plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="65+"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:padding="@dimen/_5sdp"
+                        android:text="State Licenses *"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvStateLicence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="State *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvStateLicense"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:inputType="text"
+                                android:padding="@dimen/_5sdp"
+                                android:text="select"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spStateLicense"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@null"
+                                android:spinnerMode="dialog"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Licenses Number *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtLicenseNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAddLicense"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_5dp"
+                        android:paddingEnd="@dimen/_5dp"
+                        android:text="Add a Licenses"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/dark_gray" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Board Certificate *"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBoardCertificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="0.7"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Certifying Board *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCertifyingBoard"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:inputType="text"
+                                android:padding="@dimen/_5sdp"
+                                android:text="select"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spCertifyingBoard"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@null"
+                                android:spinnerMode="dialog"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="0.3"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Status *"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCertifyingStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:inputType="text"
+                                android:padding="@dimen/_5sdp"
+                                android:text="select"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spCertifyingStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@null"
+                                android:spinnerMode="dialog"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAddBoardCertification"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="Add a Board Certification"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/dark_gray" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Federal DEA ID: (e.g.AP1234567) *"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtFederalID"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_back"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint=""
+                        android:inputType="text"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="NestedWeights" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSubmit"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="Submit"
+                        android:textAllCaps="false" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

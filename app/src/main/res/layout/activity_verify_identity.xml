@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerView"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_bottom_border"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginStart="@dimen/_5dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:text="VERIFY IDENTITY"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/rightArrow"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginEnd="@dimen/_5dp"
+                android:src="@drawable/ic_arrow_back"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INFORMATION TO VERIFY YOUR IDENTITY"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_12sdp"/>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Phone Number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:hint=""
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_9ssp"
+                            android:inputType="phone"
+                            tools:ignore="NestedWeights" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="SNN"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:hint=""
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_9ssp"
+                            android:inputType="phone"
+                            tools:ignore="NestedWeights" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Date of Birth"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="02/29/1995"
+                                android:focusable="false"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_9ssp"
+                                android:editable="false"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/calendar"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGenerateQuestion"
+                            style="@style/buttonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:elevation="@dimen/_10sdp"
+                            android:textAllCaps="false"
+                            android:layout_gravity="end"
+                            android:text="Generate Question" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorAccent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IDENTITY VERIFICATION QUESTION"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/_12sdp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="In which city does Avron Shein live or own property."
+                            android:textColor="@color/black"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radio_selector"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Addison"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Phonex"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Great Neck"
+                                android:textSize="@dimen/_9ssp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Which of the following is the street number of your most recent previous address?"
+                            android:textColor="@color/black"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radio_selector"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="1109"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="57"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="135"
+                                android:textSize="@dimen/_9ssp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="In which city does Avron Shein live or own property."
+                            android:textColor="@color/black"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radio_selector"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Addison"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Phonex"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Great Neck"
+                                android:textSize="@dimen/_9ssp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Which of the following is the street number of your most recent previous address?"
+                            android:textColor="@color/black"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radio_selector"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="1109"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="57"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:button="@drawable/radio_selector"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="135"
+                                android:textSize="@dimen/_9ssp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVerify"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:text="Verify" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPrevious"
+                            style="@style/buttonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:elevation="@dimen/_10sdp"
+                            android:textAllCaps="false"
+                            android:layout_gravity="end"
+                            android:text="Previous" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNext"
+                            style="@style/buttonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:elevation="@dimen/_10sdp"
+                            android:textAllCaps="false"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:text="Next" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

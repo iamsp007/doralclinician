@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="@dimen/_10dp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtLanuageName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sp"
+                android:hint="Language"
+
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtLanuageName"
+                android:orientation="vertical"
+                >
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbMinimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minimal"
+                    android:layout_weight="1"/>
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbFluent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fluent"
+                    android:layout_weight="1"/>
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbRead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Read"
+                    android:layout_weight="1"/>
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbWrite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Write"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubmit"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_10sdp"
+                android:text="@string/submit"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

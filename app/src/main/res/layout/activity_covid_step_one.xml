@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20sdp">
+
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="COVID-19 \n Immunization Screening \nand Consent Form"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/headerView" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_recipent_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_recipent_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:imeOptions="actionNext"
+                                android:padding="@dimen/_10dp"
+                                android:paddingStart="@dimen/_8sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="Recipient Name *"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--    Preferred Name-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_preferred_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_recipent_name">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_prefered_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:imeOptions="actionDone"
+                                android:padding="@dimen/_10dp"
+                                android:paddingStart="@dimen/_8sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="Preferred Name *"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:background="@drawable/card_gray"
+                        android:drawableEnd="@drawable/ic_calendar1"
+                        android:drawablePadding="20dp"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_10dp"
+                        android:imeOptions="actionDone"
+                        android:paddingStart="@dimen/_30dp"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="DOB"
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_preferred_name" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/sp_marital_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray"
+                            android:entries="@array/marital_status"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:layout_constraintEnd_toStartOf="@+id/sp_gender"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
+
+                        <Spinner
+                            android:id="@+id/sp_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray"
+                            android:entries="@array/gender_sp"
+                            android:hint="First Name"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/sp_marital_status"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/sp_ethinicity"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray"
+                            android:entries="@array/ethencity"
+                            android:hint="First Name"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintEnd_toStartOf="@+id/sp_sex"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sp_marital_status" />
+
+                        <Spinner
+                            android:id="@+id/sp_sex"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray"
+                            android:entries="@array/sex_sp"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/sp_ethinicity"
+                            app:layout_constraintTop_toBottomOf="@+id/sp_marital_status" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/bottom"
+                    layout="@layout/bottom_layout" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

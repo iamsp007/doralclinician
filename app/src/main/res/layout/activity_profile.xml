@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100dp"
+
+            android:background="@drawable/gradient"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_menu"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Patient Profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20dp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/ic_notification"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_minus25sdp"
+            android:background="@drawable/curv_rect"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10dp"
+                android:paddingTop="@dimen/_15dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:contentPadding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:padding="@dimen/_10dp"
+                            android:text="Patient Details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/activity_forgot_password_iv_logo"
+                                android:layout_width="@dimen/_40dp"
+                                android:layout_height="@dimen/_40dp"
+                                android:layout_margin="@dimen/_8dp"
+                                android:background="@drawable/rect_curve"
+                                android:src="@drawable/profile" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_10dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="John Smith"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_10dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="SNN Number"
+                                            android:textColor="@color/dark_gray"
+                                            android:textSize="@dimen/_10dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_ssn_number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/edittext_back"
+                                            android:padding="@dimen/_5dp"
+                                            android:text="123456789"
+                                            android:textColor="@color/dark_gray"
+                                            android:textSize="@dimen/_10dp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_20dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="DOB"
+                                            android:textColor="@color/dark_gray"
+                                            android:textSize="@dimen/_10dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_dob"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/edittext_back"
+                                            android:padding="@dimen/_5dp"
+                                            android:text="18/07/1995"
+                                            android:textColor="@color/dark_gray"
+                                            android:textSize="@dimen/_10dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    app:cardCornerRadius="@dimen/_10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvpatientdetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/_13sdp"
+                            android:paddingStart="@dimen/_15dp"
+                            android:text="Patient Details"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/_14sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/activity_patient_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+                            android:entries="@array/array_gender"
+                            android:hint=""
+                            android:inputType="text"
+                            android:overlapAnchor="false"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/activity_contect"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+                            android:entries="@array/array_gender"
+                            android:hint=""
+                            android:inputType="text"
+                            android:overlapAnchor="false"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvcontect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:hint="Emergency Contact Details"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/_13sdp"
+                            android:paddingStart="@dimen/_10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/_14sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvinsurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:hint="Insurance Details"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/_13sdp"
+                            android:paddingStart="@dimen/_10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/_14sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/activity_insurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+                            android:entries="@array/array_gender"
+                            android:hint=""
+                            android:inputType="text"
+                            android:overlapAnchor="false"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvintegration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawablePadding="@dimen/_10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:hint="Caregiver Integration Details"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/_13sdp"
+                            android:paddingStart="@dimen/_10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/_14sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/activity_integration"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/rect_curve"
+                            android:entries="@array/array_gender"
+                            android:hint=""
+                            android:inputType="text"
+                            android:overlapAnchor="false"
+                            android:popupBackground="@drawable/rect_curve"
+                            android:spinnerMode="dropdown" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/notes"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:padding="@dimen/_15dp"
+                        android:paddingStart="@dimen/_10dp"
+                        android:text="NOTES"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12dp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_road_request"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:padding="@dimen/_15dp"
+                        android:paddingStart="@dimen/_10dp"
+                        android:text="Roadl Request"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/emr_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gray1"
+                        android:text="EMR"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:theme="@style/buttonStyle" />
+
+                    <Button
+                        android:id="@+id/btn_covid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@drawable/bg_gray1"
+                        android:text="Covid-19 Screening + Vaccination"
+                        android:textAllCaps="false"
+                        android:enabled="false"
+                        android:textColor="@color/white"
+                        android:theme="@style/buttonStyle" />
+
+                    <Button
+                        android:id="@+id/complete_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@drawable/bg_round_green"
+                        android:text="Completed"
+                        android:textAllCaps="false"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/white"
+                        android:theme="@style/buttonStyle" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

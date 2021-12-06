@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="COVID-19 \nImmunization Screnning \nand Consent Form*"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:text="ADMINISTRATION SITE *"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_minus6sdp"
+                                android:orientation="horizontal">
+
+
+                                <RadioButton
+                                    android:id="@+id/rb_left_d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:button="@drawable/new_radio_selector"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:scaleX="0.8"
+                                    android:scaleY="0.8"
+                                    android:text="Left Deltoid"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_right_d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_50sdp"
+                                    android:layout_weight="1"
+                                    android:button="@drawable/new_radio_selector"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:scaleX="0.8"
+                                    android:scaleY="0.8"
+                                    android:text="Right Deltoid"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_minus6sdp"
+                                android:orientation="horizontal">
+
+
+                                <RadioButton
+                                    android:id="@+id/rb_left_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:button="@drawable/new_radio_selector"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:scaleX="0.8"
+                                    android:scaleY="0.8"
+                                    android:text="Left Thigh"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_right_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_50sdp"
+                                    android:layout_weight="1"
+                                    android:button="@drawable/new_radio_selector"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:scaleX="0.8"
+                                    android:scaleY="0.8"
+                                    android:text="Right  Thigh"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </LinearLayout>
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text="DOSAGE *"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+
+
+                        <RadioGroup
+                            android:id="@+id/rb_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/rb_5_ml"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/new_radio_selector"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:scaleX="0.8"
+                                android:scaleY="0.8"
+                                android:text="0.5 ml"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <RadioButton
+                                android:id="@+id/rb_3_ml"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:button="@drawable/new_radio_selector"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:scaleX="0.8"
+                                android:scaleY="0.8"
+                                android:text="0.3 ml"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text="@string/terms_condition"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/term_condition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:button="@drawable/new_radio_selector"
+                                android:gravity="top"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:text="I have provided the patient (and/or parent, guardian or surrogate, as applicable) with information about the vaccine and consent
+to vaccination was obtained." />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rl_signature"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/card_gray"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_10sdp"
+                                android:background="@drawable/edit" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/signaturePad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Vaccinator Signature" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_signature"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:text="*Use of this form is optional. In the ongoing effort to address health disparities it is essential that all demographic information is collected at
+the time of COVID-19 vaccination including sex/gender identity and race/ethnicity"
+                            android:textColor="#000"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_Submit"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_back"
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textColor="#FFF"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/rl_bottom"
+                    layout="@layout/bottom_layout"></include>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

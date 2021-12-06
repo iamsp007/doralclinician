@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            app:cardBackgroundColor="@color/color_FC0023"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:src="@drawable/profile"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="@dimen/_2dp"
+                        app:civ_circle_background_color="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_profile"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingVertical="@dimen/_5dp"
+                        android:text="Edword Norton"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/doctor_bottom"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_5sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_profile"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Edword Norton"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_profile"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="150 High"
+                        android:textColor="@color/color_FC0023"
+                        android:textSize="@dimen/_12dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

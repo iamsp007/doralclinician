@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwipeButtonView">
+        <attr name="sb_swipe_bg_color" format="color" />
+        <attr name="sb_thumb_bg_color" format="color" />
+        <attr name="sb_stroke_bg_color" format="color" />
+        <attr name="sb_thumb_image" format="reference" />
+        <attr name="sb_swipe_text" format="string" />
+        <attr name="sb_swipe_text_color" format="color" />
+        <attr name="sb_swipe_animate_text" format="boolean" />
+        <attr name="sb_swipe_text_size" format="dimension" />
+        <attr name="sb_swipe_reverse" format="boolean" />
+        <attr name="sb_swipe_both_direction" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ScrollDatePicker">
+        <attr name="baseColor" format="color"/>
+        <attr name="baseTextColor" format="color"/>
+        <attr name="selectedColor" format="color"/>
+        <attr name="selectedTextColor" format="color"/>
+        <attr name="showTitle" format="boolean"/>
+        <attr name="showFullDate" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="PinViewTheme">
+        <attr name="pinViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="OTPEditText">
+        <attr name="itemCount" format="integer" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="itemRadius" format="dimension" />
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="viewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="hideLineWhenFilled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularTimerView">
+        <attr name="progressColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="progressBackgroundColor" format="color"/>
+        <attr name="strokeWidthDimension" format="dimension"/>
+        <attr name="backgroundWidth" format="float"/>
+        <attr name="roundedCorners" format="boolean"/>
+        <attr name="maxValue" format="float"/>
+        <attr name="progressTextColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="progressText" format="string"/>
+        <attr name="suffix" format="string"/>
+        <attr name="prefix" format="string"/>
+        <attr name="isClockwise" format="boolean"/>
+        <attr name="startingPoint" format="enum">
+            <enum name="top" value="270" />
+            <enum name="bottom" value="90" />
+            <enum name="right" value="0" />
+            <enum name="left" value="180" />
+        </attr>
+    </declare-styleable>
+</resources>

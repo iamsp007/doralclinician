@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Company Name*"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_company"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:hint=""
+                            android:imeOptions="actionNext"
+                            android:padding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Phone No.*"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:hint=""
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/address_line_1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/edt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_back"
+                        android:drawableEnd="@drawable/address"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint=""
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="NestedWeights" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:paddingVertical="@dimen/_2sdp"
+                        android:text="Street name OR P.O. box"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="gone" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/address_line_2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_address1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_back"
+                        android:drawableEnd="@drawable/address"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="NestedWeights" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:paddingVertical="@dimen/_2sdp"
+                        android:text="Street name OR P.O. box"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Apt#"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/apt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:hint=""
+                            android:imeOptions="actionNext"
+                            android:padding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/texthintcolor"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="NestedWeights" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/city"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/tvCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:enabled="false"
+                                android:inputType="text"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/sp_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:spinnerMode="dialog"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/state"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvState"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/ic_dropdown"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:enabled="false"
+                                android:padding="@dimen/_5sdp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/sp_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:spinnerMode="dialog"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/zipcode"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtZipCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/state"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_back"
+                                android:drawableEnd="@drawable/drop_down"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint=""
+                                android:inputType="phone"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/texthintcolor"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="NestedWeights" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="true"-->
+<!--                        android:fontFamily="@font/montserrat_medium"-->
+<!--                        android:padding="@dimen/_5sdp"-->
+<!--                        android:text="Supervisor"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/_10ssp" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatEditText-->
+<!--                        android:id="@+id/edt_supervisor"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/edittext_back"-->
+<!--                        android:fontFamily="@font/montserrat_medium"-->
+<!--                        android:hint=""-->
+<!--                        android:imeOptions="actionNext"-->
+<!--                        android:inputType="text"-->
+<!--                        android:padding="@dimen/_10sdp"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textColorHint="@color/texthintcolor"-->
+<!--                        android:textSize="@dimen/_10ssp"-->
+<!--                        tools:ignore="NestedWeights" />-->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSubmit"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/submit"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+
+</layout>

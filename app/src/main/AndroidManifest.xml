@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.doral">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:name=".Utils.AppClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar.FullScreen"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ChangePasscode" />
+        <activity android:name=".Passcode">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".adapter.Category" />
+        <activity android:name=".NotificationList" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".Patient_list" />
+        <activity android:name=".PayrollActivity" />
+        <activity android:name=".FormPreviewActivity" />
+        <activity android:name="com.android.CovidFormActivity" />
+        <activity android:name=".FormsActivity" />
+        <activity android:name=".HistoryActivity" />
+        <!--
+ <activity android:name=".Covid_Step_One_Activity" />
+        <activity android:name=".Covid_Step_Two_Activity" />
+        <activity android:name=".Covid_Step_Three_Activity" />
+        <activity android:name=".Covid_Step_Five_Activity" />
+        <activity android:name=".Covid_Step_Four_Activity" />
+        <activity android:name=".Covid_Step_Six_Activity" />
+        <activity android:name=".Covid_Step_Seven_Activity" />
+        <activity android:name=".Covid_Step_sixsteen_Activity" />
+        <activity android:name=".Covid_Step_seventeen_Activity" />
+        <activity android:name=".Covid18" />
+        <activity android:name=".Covid19" />
+        <activity android:name=".Covid20" />
+        <activity android:name=".Covid14" />
+        <activity android:name=".Covid15" />
+        -->
+        <activity android:name=".RoadLStatusActivity" />
+        <activity android:name=".RoadlRequestActivity" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Company_profile" />
+        <activity
+            android:name=".NewDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.android.Vendor.Activity.UpcomingVisitActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.android.Vendor.Activity.VendorDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.android.Vendor.Activity.RoadLRequestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity android:name=".AppointmentActivity" />
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".ProfessionalActivity" />
+        <activity
+            android:name=".ReasonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".DipositActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".EducationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".AddCompanyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ApplicationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".UploadDocumentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".SignatureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".CreateProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".TermsofuseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".OtpVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".UpdateMobileNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".WorkhistoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".VerifyIdentityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".CreateProfileInformationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".GetRequestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ClinicianTrackActivity" />
+        <activity
+            android:name=".ImagePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent" /> <!-- uCrop cropping activity -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompanyDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EmergencyDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SecurityDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EmergencyRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NurseLanguageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FamilyDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MilitaryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NurseReferenceRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NurseApplicationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EmploymentRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EmploymentSchoolRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NurseProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NurseUploadDocumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditUserProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <service
+            android:name=".service.GeoService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

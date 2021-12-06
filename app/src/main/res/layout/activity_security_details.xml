@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_bottom"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Security"
+                    android:visibility="gone"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/have_you_ever_been_bonded"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_bonded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_bonded_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radio_selector"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Yes"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_bonded_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:button="@drawable/radio_selector"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="No"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linBondInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="If so, exaplain"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtBond"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@drawable/card_primary_color"
+                        android:gravity="top"
+                        android:hint=""
+                        android:padding="@dimen/_15dp"
+                        android:visibility="visible"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        app:layout_constraintTop_toBottomOf="@+id/activity_reasons_rv_reasons" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Have you been convicted of a felony within the last 5 years?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_convict"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_convict_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radio_selector"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Yes"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_convict_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:button="@drawable/radio_selector"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="No"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linFalconyInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_5sdp"
+                    android:text="If so, exaplain(this will not necessarily exclude you from consideration)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtFelony"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@drawable/card_primary_color"
+                    android:gravity="top"
+                    android:hint=""
+                    android:padding="@dimen/_15dp"
+                    android:visibility="visible"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_reasons_rv_reasons" />
+            </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_previous"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:elevation="@dimen/_10sdp"
+                android:text="@string/previous"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_next"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:elevation="@dimen/_10sdp"
+                android:text="@string/submit" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>

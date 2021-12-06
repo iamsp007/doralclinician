@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2CB9C7</color>
+    <color name="colorPrimaryDark">#1B98AB</color>
+    <color name="colorAccent">#2CB9C7</color>
+    <color name="colorAccent1">#CC1B98AB</color>
+    <color name="grey">#E8E8E8</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="texthintcolor">#939393</color>
+    <color name="color_00259C">#00259C</color>
+    <color name="color_AEAEAE">#AEAEAE</color>
+    <color name="color_F58287">#F58287</color>
+    <color name="color_74ABB0">#74ABB0</color>
+    <color name="color_38B348">#38B348</color>
+    <color name="color_00259A">#00259A</color>
+    <color name="gray">#E8E8E8</color>
+    <color name="dark_gray">#939393</color>
+    <color name="light_gray">#B2939393</color>
+    <color name="color_D8D8D8">#D8D8D8</color>
+    <color name="color_6E6E6E">#6E6E6E</color>
+    <color name="color_0DD2E0">#0DD2E0</color>
+    <color name="color_FC0023">#FC0023</color>
+    <color name="color_9F30F3">#9F30F3</color>
+    <color name="color_C3F5FF">#C3F5FF</color>
+
+    <color name="default_selected">#686868</color>
+    <color name="default_selected_text">#FFFFFF</color>
+    <color name="default_base">#FFFFFF</color>
+    <color name="default_base_text">#000000</color>
+    <color name="color_2CB9C7">#2CB9C7</color>
+    <color name="color_0D7D94">#0D7D94</color>
+    <color name="color">#0D7D94</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_colorAccent">#742CB9C7</color>
+
+</resources>

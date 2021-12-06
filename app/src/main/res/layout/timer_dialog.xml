@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone" />
+
+            <com.uzairiqbal.circulartimerview.CircularTimerView
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:backgroundColor="@color/color_C3F5FF"
+                app:backgroundWidth="8"
+                app:isClockwise="true"
+                app:maxValue="100"
+                app:prefix=""
+                app:progressBackgroundColor="#eee"
+                app:progressColor="@color/colorPrimaryDark"
+                app:progressText="Time Remaining..."
+                app:progressTextColor="@color/black"
+                app:startingPoint="bottom"
+                app:suffix=""
+                app:textSize="@dimen/_22ssp" />
+
+
+            <TextView
+                android:id="@+id/tv_error_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:fontFamily="@font/latobold"
+                android:gravity="center"
+                android:text="00:30"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24sdp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:id="@+id/tv_ok"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:gravity="center"
+                    android:minWidth="@dimen/_120sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="New Form"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

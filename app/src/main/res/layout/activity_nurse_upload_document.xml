@@ -1,0 +1,2628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SignatureActivity">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_next"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:visibility="gone" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp"
+                        android:text="@string/step_1_of_4"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp"
+                        android:text="Add document from your phone \n or open camera to upload documents"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llNurseDocument"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:paddingVertical="@dimen/_3sdp"
+                                        android:text="ID Proof (Any one)"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:text="*Driver's License"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:text="*Passport"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:text="*Permanent Resident Card"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:text="*Work Authorisation Card"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+
+                                    <!--                                <androidx.appcompat.widget.AppCompatImageView-->
+                                    <!--                                    android:id="@+id/img_id_proof"-->
+                                    <!--                                    android:layout_width="@dimen/_50sdp"-->
+                                    <!--                                    android:layout_weight="1"-->
+                                    <!--                                    android:layout_height="@dimen/_30sdp"-->
+                                    <!--                                    android:visibility="gone" />-->
+
+
+                                    <Button
+                                        android:id="@+id/rl_id_proof"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1"
+                                        android:drawableEnd="@drawable/attach"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Front"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_15dp" />
+
+
+                                    <Button
+                                        android:id="@+id/idproof"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:drawableEnd="@drawable/attach"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Back"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_15dp" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/doc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/img_id_proof"
+                                        android:layout_width="@dimen/_50sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_weight="1"
+                                        android:visibility="gone" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/img_proof"
+                                        android:layout_width="@dimen/_50sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:visibility="gone" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/img_id_proof1"
+                                        android:layout_width="@dimen/_50sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_weight="1"
+                                        android:visibility="gone" />
+
+                                    <!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+                                    <!--                                        android:id="@+id/tv_pdfdoc"-->
+                                    <!--                                        android:layout_width="wrap_content"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_gravity="center_horizontal"-->
+                                    <!--                                        android:fontFamily="@font/montserrat_regular"-->
+                                    <!--                                        android:gravity="end|center_vertical"-->
+                                    <!--                                        android:padding="@dimen/_3sdp"-->
+                                    <!--                                        android:text="Back"-->
+                                    <!--                                        android:visibility="gone"-->
+                                    <!--                                        android:background="@drawable/bg_gray"-->
+                                    <!--                                        android:drawableEnd="@drawable/attach"-->
+                                    <!--                                        android:layout_weight="1"-->
+                                    <!--                                        android:textColor="@color/black"-->
+                                    <!--                                        android:textSize="@dimen/_15dp" />-->
+
+                                    <!--                                    <Button-->
+                                    <!--                                        android:id="@+id/idproof"-->
+                                    <!--                                        android:layout_width="wrap_content"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_gravity="center_horizontal"-->
+                                    <!--                                        android:fontFamily="@font/montserrat_regular"-->
+                                    <!--                                        android:gravity="end|center_vertical"-->
+                                    <!--                                        android:padding="@dimen/_3sdp"-->
+                                    <!--                                        android:text="Back"-->
+                                    <!--                                        android:drawableEnd="@drawable/attach"-->
+                                    <!--                                        android:layout_weight="1"-->
+                                    <!--                                        android:textColor="@color/black"-->
+                                    <!--                                        android:textSize="@dimen/_15dp" />-->
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <!--                        <androidx.appcompat.widget.AppCompatImageView-->
+                        <!--                            android:id="@+id/img_id_proof"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="@dimen/_70sdp"-->
+                        <!--                            android:visibility="gone" />-->
+
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="ID Proof (Any-one)-Back"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvproof"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <!--                        <androidx.appcompat.widget.AppCompatImageView-->
+                        <!--                            android:id="@+id/img_proof"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="@dimen/_70sdp"-->
+                        <!--                            android:visibility="gone" />-->
+
+                        <!-- tvMedicalFileName-->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_social_security"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Social Security (Orginal only)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:visibility="gone" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+
+                                    <!--                                <androidx.appcompat.widget.AppCompatImageView-->
+                                    <!--                                    android:id="@+id/img_id_proof"-->
+                                    <!--                                    android:layout_width="@dimen/_50sdp"-->
+                                    <!--                                    android:layout_weight="1"-->
+                                    <!--                                    android:layout_height="@dimen/_30sdp"-->
+                                    <!--                                    android:visibility="gone" />-->
+
+
+                                    <Button
+                                        android:id="@+id/rl_id_socialproof"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1"
+                                        android:drawableEnd="@drawable/attach"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Front"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_15dp" />
+
+
+                                    <Button
+                                        android:id="@+id/idsocialproof"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:drawableEnd="@drawable/attach"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Back"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_15dp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecurity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:text="Dr. Mathew ID proof.pdf"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/_10sdp"
+                                        android:visibility="gone" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/img_security"
+                                        android:layout_width="@dimen/_50sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_weight="1"
+                                        android:visibility="gone" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/Security1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:text="Dr. Mathew ID proof.pdf"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/_10sdp"
+                                        android:visibility="gone" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/img_socialproof"
+                                        android:layout_width="@dimen/_50sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_social_security1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Social Security (Orginal only)-Back"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSecurity1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_securityback"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/rl_professional_ref"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Professional Reference Letters"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:padding="@dimen/_3sdp"
+                                android:text="must be completed within 3 months, Dated of this year,English language,Valid Phone,No RELATIVES"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_8ssp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvProfessionalRef"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_proffestional"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!-- NYC Nurse Certificate-->
+                        <RelativeLayout
+                            android:id="@+id/rl_nyc_nurse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Nurse Certificate"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNYC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_nyc"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!--                    MainPractice-->
+                        <RelativeLayout
+                            android:id="@+id/rl_mainpractice_insurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="MainPractice Insurance"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPractise"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_practice"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!--                CPR-->
+                        <RelativeLayout
+                            android:id="@+id/rl_CPR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="CPR"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCPR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_cpr"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!--                Physical-->
+                        <RelativeLayout
+                            android:id="@+id/rl_physical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Physical"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Completed Within 1 year"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPhysical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_physical"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!--                Forensic Drug Screen-->
+                        <RelativeLayout
+                            android:id="@+id/rl_forensic_drug"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Forensic Drug Screen \n (Lab Report)"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Completed Within 1 year"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvForensicDrug"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_forensic"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!--                Rubella Immunization-->
+                        <RelativeLayout
+                            android:id="@+id/rl_rubella_immunization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="start"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Rubella Immunization\n(LAB Report)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRubellaImmunization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_rubella"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+
+                        <!--  Rubella/Measles-->
+                        <RelativeLayout
+                            android:id="@+id/rl_rubella_Measles_immunization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="start"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Rubella/Measles \nImmunization\n(LAB Report)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRubellaMeasles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_rubela_meassels"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!--                Annual PPD-->
+                        <RelativeLayout
+                            android:id="@+id/rl_annual_PPD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="start"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Annual PPD OR\n Quantiferon results"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="start"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Completed Within 1 year"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_x_ray_chest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="start"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Chest X-Ray"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAnnual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_annual_ppd"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+                        <!--                Flu Vaccination-->
+                        <RelativeLayout
+                            android:id="@+id/rl_flu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="start"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Flu Vaccination\n(Flu Shot)"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="start"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="For Current Year"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFlu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_flue"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_xraychest"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_annual_screening"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="start"
+                                        android:padding="@dimen/_3sdp"
+                                        android:text="Annual Tuberculosis\n Screening\nQuestionnaire Form"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableEnd="@drawable/attach"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="end|center_vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(PDF,XlS,PNG,JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_annual_screening"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_degree_proof"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Degree Proof *"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_degree_file_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_insurance_proof"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Insurance Reports *"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_insourance_file_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_medical_proof"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Medical Reports *"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_medical_file_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_pict_identification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Picture Identification"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_pict_identification"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_current_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Current CV"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_current_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_professional"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Professional Licence*"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_professional"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_state_reg_cert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="State Registration\n Certificate*"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_state_reg_cert"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_dea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="DEA Licence*"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_dea"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_controll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Controlled substance\n state Licence*"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_controll"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_malprctice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Malepractice Certificate\nof Insurance*"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_malprctice"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_All_malprctice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Explanation of\n All Maleprctice"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_All_malpractice"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_school_diploma"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Medical School\n Diploma"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_medical_school_diploma"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_rec_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Residency Certificate"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_rec_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_fell_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Fellowship Certificate"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_fell_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_inten_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Internship Certificate"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_inten_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_ECFMGCertificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="ECFMG Certificate"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_ECFMGCertificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_BoardCertificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Board Certificate"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_BoardCertificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_HospitalAffiliationLetter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Hospital Affiliation\n Letter"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_HospitalAffiliationLetter"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_SanctionsQueries"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Sanctions Queries"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_SanctionsQueries"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_MedicalWelcomeLetter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Medical Welcome\n Letter"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_MedicalWelcomeLetter"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_SignedW9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Signed W9"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_SignedW9"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_SignedESignatureForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/edittext_back"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="Signed ESignature\n Form"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="left"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="(.PDF,.XlS,.PNG,.JPG)"
+                                    android:textColor="@color/color_AEAEAE"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:src="@drawable/attach" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tv_SignedESignatureForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Dr. Mathew ID proof.pdf"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_next"
+            style="@style/buttonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:elevation="@dimen/_10sdp"
+            android:text="@string/submit" />
+    </RelativeLayout>
+</layout>

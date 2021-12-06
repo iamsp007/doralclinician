@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_bottom"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20sdp">
+
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30dp"
+                        android:layout_marginTop="@dimen/_30dp"
+                        android:layout_marginEnd="@dimen/_30dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="COVID-19 \n Insurance Details"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/headerView" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_primary_insurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:background="@drawable/background_grey"
+                        android:drawableEnd="@drawable/ic_down_drop"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:text="Primary insurance details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <!--    Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_insurance_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/el_insurance_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Primary Insurance Name"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_primary_insurance_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_insurance_name">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_primary_insurance_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Primary Insurance ID#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_priamry_insurance_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_primary_insurance_id">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_priamry_insurance_phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Primary Insurance Phone#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--    Subscriber-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_subscriber"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_priamry_insurance_phone">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_subscriber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionDone"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Subscriber Name"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/tv_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/bg_gray"
+                            android:drawableEnd="@drawable/ic_new_calender"
+                            android:gravity="center_vertical"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_30dp"
+                            android:paddingEnd="@dimen/_30dp"
+                            android:text="Subscriber DOB"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_subscriber" />
+
+                        <!--    subscriber_rel_patient-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_subscriber_rel_patient"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/et_subscriber_rel_patient"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:entries="@array/relationship"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:popupBackground="@drawable/rect_curve"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Subscriber Rel.to Patient"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_primary_insurance_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_subscriber_rel_patient">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_primary_insurance_group"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Primary Insurance Group#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_primary_insurance_Address"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_primary_insurance_group">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_cl_primary_insurance_Address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:drawableStart="@drawable/map"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Primary Insurance Address#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_secondary_insurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:background="@drawable/background_grey"
+                        android:drawableEnd="@drawable/ic_down_drop"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:text="Secondary insurance details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_secondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <!--    Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/el_insurance_name_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Secondary Insurance Name"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_insurance_name">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_primary_insurance_id_seoond"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Secondary Insurance ID#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_primary_insurance_id">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_priamry_insurance_phone_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Secondary Insurance Phone#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--    Subscriber-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_priamry_insurance_phone">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_subscriber_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionDone"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Subscriber Name"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/tv_dob_second"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/bg_gray"
+                            android:drawableEnd="@drawable/ic_new_calender"
+                            android:gravity="center_vertical"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_30dp"
+                            android:paddingEnd="@dimen/_30dp"
+                            android:text="Subscriber DOB"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_subscriber" />
+
+                        <!--    subscriber_rel_patient-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/et_subscriber_rel_patient_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:entries="@array/relationship"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:popupBackground="@drawable/rect_curve"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Subscriber Rel.to Patient"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_subscriber_rel_patient">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_primary_insurance_group_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_30dp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Secondary Insurance Group#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <!--    Primary Insurance-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_primary_insurance_group">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:background="@drawable/card_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_cl_primary_insurance_Address_seocnd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:drawableStart="@drawable/map"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/_10dp"
+
+                                android:paddingEnd="@dimen/_10dp"
+                                android:text="Secondary Insurance Address#"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/rl_bottom"
+            layout="@layout/bottom_layout"></include>
+    </RelativeLayout>
+</layout>

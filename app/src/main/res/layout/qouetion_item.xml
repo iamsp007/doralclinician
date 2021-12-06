@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/card_gray"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:lineSpacingExtra="@dimen/_5sdp"
+            android:text="1.I have read, or had explained to me, the information sheet about the COVID-19 vaccination. I understand that if my vaccine requires two doses,"
+            android:textColor="#000"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
+
+        <RadioGroup
+            android:id="@+id/rb_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/card_gray"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <RadioButton
+                android:id="@+id/rb_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:button="@drawable/new_radio_selector"
+                android:padding="@dimen/_5sdp"
+                android:text="Yes"
+                android:textSize="@dimen/_10sdp" />
+
+            <RadioButton
+                android:id="@+id/rb_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:button="@drawable/new_radio_selector"
+                android:padding="@dimen/_5sdp"
+                android:text="No"
+                android:textSize="@dimen/_10sdp" />
+
+            <RadioButton
+                android:id="@+id/rb_unknown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:button="@drawable/new_radio_selector"
+                android:padding="@dimen/_5sdp"
+                android:text="Unknown"
+                android:textSize="@dimen/_10sdp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/vaccine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/card_gray"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <RadioButton
+                        android:id="@+id/v1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:button="@drawable/new_radio_selector"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Pfizer/ BioNTech"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RadioButton
+                        android:id="@+id/v2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:button="@drawable/new_radio_selector"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Moderna"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <RadioButton
+                        android:id="@+id/v3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:button="@drawable/new_radio_selector"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Astra-Zeneca"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RadioButton
+                        android:id="@+id/v4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:button="@drawable/new_radio_selector"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Johnson and Johnson"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RadioGroup>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:padding="@dimen/_5sdp"
+            android:text="Select Date"
+            android:textColor="#000"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

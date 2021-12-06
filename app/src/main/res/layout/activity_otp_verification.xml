@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_menu"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_back" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/activity_forgot_password_iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_curve"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/lock_forgot"
+                app:tint="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/activity_forgot_password_tv_forgot_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="Enter Otp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_iv_logo" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:background="@drawable/curv_rect"
+            android:orientation="vertical"
+            android:padding="@dimen/_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/activity_forgot_password_tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="We just need your registered email address \n or mobile number to send you password reset"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/_13sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.android.doral.customView.OTPEditText
+                    android:id="@+id/edtOtp"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/bg_gray"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:itemCount="4"
+                    app:itemHeight="@dimen/_60sdp"
+                    app:itemSpacing="@dimen/_12sdp"
+                    app:itemWidth="@dimen/_60sdp"
+                    app:viewType="none" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/bg_round_green"
+                android:text="Verify"
+                android:textColor="@color/white"
+                android:theme="@style/buttonStyle"
+                app:layout_constraintTop_toBottomOf="@+id/activity_forgot_password_et_email" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/latoregular"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/resend"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
+
+

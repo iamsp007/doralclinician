@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_icon"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_loading" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/img_icon"
+                android:fontFamily="@font/montserrat_semibold"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTravelTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/img_icon"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:maxLines="1"
+            android:layout_below="@+id/tv_title"
+            android:singleLine="true"
+            android:text="Travel Time: 00 Min"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_10sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@color/black" />
+
+    </LinearLayout>
+</layout>

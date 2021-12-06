@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_bottom"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_30sdp">
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:layout_marginEnd="@dimen/_30dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="COVID-19\nImmunization Screening\nSignature"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/headerView" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/background_grey"
+                    android:button="@drawable/new_radio_selector"
+                    android:drawableEnd="@drawable/ic_down_drop"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="Recipient/Surrogate/Guardian recipient "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/rl_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:background="@drawable/card_gray"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:background="@drawable/edit" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/signaturePad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Recipient/Surrogate/Guardian recipient " />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/card_gray"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_15sdp"
+
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@drawable/ic_new_calender" />
+
+                        <TextView
+                            android:id="@+id/tv_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date/Time (mm/dd/yyyy)"
+                            android:inputType="text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_subscriber" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Relationship to Patient(if other than recipient)"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <Spinner
+                        android:id="@+id/sp_relation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/bg_gray"
+                        android:entries="@array/relationship"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_10dp"
+                        android:popupBackground="@drawable/rect_curve"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+                    <!--    Insurance-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_insurance_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_print_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10dp"
+                                android:paddingStart="@dimen/_30dp"
+                                android:singleLine="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="Print Name"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_third"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/background_grey"
+                    android:button="@drawable/new_radio_selector"
+                    android:drawableEnd="@drawable/ic_down_drop"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="Interpreter"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll_third"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:background="@drawable/card_gray"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:background="@drawable/edit" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/signaturePad_interpretter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Signature: Interpreter" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_signature_interpretter"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/card_gray"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_15sdp"
+
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@drawable/ic_new_calender" />
+
+                        <TextView
+                            android:id="@+id/tv_dob_interpretter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date/Time (mm/dd/yyyy)"
+                            android:inputType="text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_subscriber" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Print: Interpreter’s Name and Relationship to Patient"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <Spinner
+                        android:id="@+id/sp_relation_interpretter"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/bg_gray"
+                        android:entries="@array/relationship"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_10dp"
+                        android:popupBackground="@drawable/rect_curve"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/background_grey"
+                    android:button="@drawable/new_radio_selector"
+                    android:drawableEnd="@drawable/ic_down_drop"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="Telephonic Interpreter"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll_seocond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_primary_insurance_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_insurance_name">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:background="@drawable/card_gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_telephonic"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionDone"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10dp"
+                                android:paddingStart="@dimen/_30dp"
+                                android:singleLine="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_10dp"
+
+                            android:paddingEnd="@dimen/_10dp"
+                            android:text="Telephonic Interpreter’s ID #"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/card_gray"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_15sdp"
+
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@drawable/ic_new_calender" />
+
+                        <TextView
+                            android:id="@+id/tv_dob1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date/Time (mm/dd/yyyy)"
+                            android:inputType="text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_subscriber" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/rl_bottom"
+            layout="@layout/bottom_layout"></include>
+
+    </RelativeLayout>
+</layout>
